@@ -1,0 +1,252 @@
+/* A deliberately plain stylesheet: one narrow column, no ornament.
+   Sizes are in rem so the reader's browser settings still matter. */
+
+:root {
+  --text: #000;
+  --muted: #666;
+  --link: #0000cc;
+  --rule: #ddd;
+  --measure: 34rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 2.5rem 1.25rem 4rem;
+  background: #fff;
+  color: var(--text);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  position: static;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+/* Header and footer */
+
+.masthead {
+  margin-bottom: 2.5rem;
+}
+
+.masthead a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.masthead a:hover {
+  text-decoration: underline;
+}
+
+.site-name {
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+}
+
+.masthead nav {
+  margin-top: 0.35rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.masthead nav a {
+  color: var(--muted);
+}
+
+.masthead nav span {
+  margin: 0 0.4rem;
+  color: var(--rule);
+}
+
+.colophon {
+  max-width: var(--measure);
+  margin: 3.5rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.colophon a {
+  color: var(--muted);
+}
+
+/* Headings and text */
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.9375rem;
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre {
+  margin: 0 0 1.1rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.8125rem;
+}
+
+.section-label {
+  margin: 2.5rem 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+/* Article lists */
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  margin-bottom: 1.1rem;
+}
+
+.list .title {
+  font-weight: bold;
+}
+
+.list .summary {
+  margin: 0.15rem 0 0;
+}
+
+.list .meta {
+  display: block;
+  margin-top: 0.15rem;
+}
+
+.draft {
+  color: #a33;
+  font-style: italic;
+}
+
+/* Long-form text */
+
+.essay {
+  margin-top: 1.5rem;
+}
+
+.essay > :first-child {
+  margin-top: 0;
+}
+
+.essay ul,
+.essay ol {
+  padding-left: 1.4rem;
+}
+
+.essay li {
+  margin-bottom: 0.4rem;
+}
+
+.essay blockquote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--rule);
+  color: #333;
+}
+
+.essay code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.8125rem;
+}
+
+.essay pre {
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.essay pre code {
+  font-size: inherit;
+}
+
+.essay img {
+  max-width: 100%;
+  height: auto;
+}
+
+.essay hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2rem 0;
+}
+
+.colophon-note {
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.article-footer {
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.article-footer a {
+  color: var(--link);
+}

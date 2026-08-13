@@ -1,0 +1,37 @@
+---
+import type { Article } from '../lib/articles';
+import { formatDate } from '../lib/articles';
+
+interface Props {
+  articles: Article[];
+  showCategory?: boolean;
+}
+
+const { articles, showCategory = true } = Astro.props;
+const categoryLabels: Record<Article['data']['category'], string> = {
+  software: 'Software',
+  business: 'Business',
+};
+---
+
+{
+  articles.length === 0 ? (
+    <p class="meta">Nothing published here yet.</p>
+  ) : (
+    <ul class="list">
+      {articles.map((article) => (
+        <li>
+          <a class="title" href={`/articles/${article.id}`}>{article.data.title}</a>
+          {article.data.draft && <span class="draft"> (draft)</span>}
+          <p class="summary">{article.data.description}</p>
+          <span class="meta">
+            <time datetime={article.data.publishedAt.toISOString()}>
+              {formatDate(article.data.publishedAt)}
+            </time>
+            {showCategory && ` · ${categoryLabels[article.data.category]}`}
+          </span>
+        </li>
+      ))}
+    </ul>
+  )
+}

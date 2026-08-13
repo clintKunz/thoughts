@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Thoughts',
+  description = 'Notes on software development and business.',
+} = Astro.props;
+const pageTitle = title === 'Thoughts' ? title : `${title} - Thoughts`;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="alternate" type="application/rss+xml" title="Thoughts" href="/rss.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="page masthead">
+      <div class="site-name"><a href="/">Thoughts</a></div>
+      <nav aria-label="Primary">
+        <a href="/articles">Articles</a>
+        <span aria-hidden="true">|</span>
+        <a href="/categories/software">Software</a>
+        <span aria-hidden="true">|</span>
+        <a href="/categories/business">Business</a>
+        <span aria-hidden="true">|</span>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+    <main id="content" class="page">
+      <slot />
+    </main>
+    <footer class="colophon">
+      Clint Kunz. <a href="/rss.xml">RSS</a> ·
+      <a href="https://github.com/clintKunz/thoughts">Source</a>
+    </footer>
+  </body>
+</html>

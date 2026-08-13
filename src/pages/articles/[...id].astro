@@ -1,0 +1,45 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { categoryDetails, formatDate, isPublished, type Article } from '../../lib/articles';
+
+export async function getStaticPaths() {
+  const articles = (await getCollection('articles')).filter(isPublished);
+  return articles.map((article) => ({
+    params: { id: article.id },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: Article;
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+const { data } = article;
+---
+
+<BaseLayout title={data.title} description={data.description}>
+  <article>
+    <h1>{data.title}</h1>
+    <p class="meta">
+      <time datetime={data.publishedAt.toISOString()}>{formatDate(data.publishedAt)}</time>
+      {' · '}
+      <a href={`/categories/${data.category}`}>{categoryDetails[data.category].label}</a>
+      {data.updatedAt && ` · updated ${formatDate(data.updatedAt)}`}
+      {data.draft && <span class="draft"> · draft</span>}
+    </p>
+
+    <div class="essay">
+      <Content />
+    </div>
+
+    <p class="colophon-note">Written with AI. Reviewed and signed off by Clint.</p>
+
+    <p class="article-footer">
+      {data.tags.length > 0 && <>{data.tags.join(', ')}<br /></>}
+      <a href="/articles">All articles</a>
+    </p>
+  </article>
+</BaseLayout>
