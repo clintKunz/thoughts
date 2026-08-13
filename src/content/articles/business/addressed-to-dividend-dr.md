@@ -23,13 +23,17 @@ Remember this next part, because it is the one you will forget. Joseph Bower and
 
 So there are two illusions. The first is thinking you control the market. You do not. The second is thinking that because you *said* resources should move, they moved. Announcing is not allocating.
 
-Your real work is the boring machinery underneath: what gets proposed, what the criteria are, what you kill to free up room, who gets promoted, and where you spend your Tuesday. Shape that, and the strategy follows. Skip it, and you are wearing the jersey in a nicer chair.
+Now, do not swing too far and decide that talking is worthless. It is not. Kim Clark wrote a book with his kids called *Leading Through*, and the point that stuck with me is that almost everything you accomplish happens through other people. That is what a speech is for. A good one can change what your people believe is worth proposing, what they are willing to champion, what they feel safe to try. That is not the jersey. That is you working on the exact machinery Bower was describing.
+
+The difference is the listener. A speech that lands changes what someone does on Monday. A speech that is ignored, or that nobody is set up to act on, changes nothing but your own sense of having done something. Same words. So do not ask whether you gave the speech. Ask whether anyone moved because of it.
+
+Your real work, then, is the boring machinery underneath the words: what gets proposed, what the criteria are, what you kill to free up room, who gets promoted, and where you spend your Tuesday. Talk in service of that, and the talk matters. Talk instead of that, and you are wearing the jersey in a nicer chair.
 
 Look at last quarter's spending, headcount, and calendar. Write down the strategy those imply. Compare it to the one you have been saying out loud. The first one is true.
 
 What did you kill this quarter? If nothing, you did not allocate. You accumulated.
 
-You can still give the speech. Just give it about something you have already funded.
+So give the speech. Just make sure it points at something you have already funded, and at people who are set up to act on it.
 
 Best,\
 C-Money
