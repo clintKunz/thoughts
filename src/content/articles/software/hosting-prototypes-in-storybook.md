@@ -21,6 +21,6 @@ You can see the components. The same pieces we are prototyping with are sitting 
 
 And you can see the whole flow. We lay the onboarding out as connected screens on one canvas — create a board, import contacts, set up the dialer, pick numbers — so you can follow the path end to end instead of clicking through it blind. A scale control zooms the whole thing in and out when you want the overview or the detail.
 
-![A Storybook story showing the Wavv onboarding as connected screens on one canvas, with a wizard variant branching off and a scale control at the bottom.](/images/prototypes-storybook-flow.png)
+![A Storybook story showing the Wavv onboarding as connected screens on one canvas, with a wizard variant branching off and a scale control at the bottom.](/images/prototypes-storybook-flow.jpg)
 
 None of this is fancy. We are building real UIs, hosting them where the states, components, and flows are all easy to see, and letting a link carry the discussion. It makes the conversation faster and more concrete, and that is the entire reason we like it.
