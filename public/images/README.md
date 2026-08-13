@@ -4,9 +4,10 @@ Files here are served at the site root under `/images/...`. For example,
 `public/images/prototypes-storybook-flow.png` is referenced in Markdown as
 `/images/prototypes-storybook-flow.png`.
 
-## Needed
+Reference an image with the same extension as the file on disk, and include
+`width` and `height` so the page does not shift while the image loads.
 
-- `prototypes-storybook-flow.png` — Storybook screenshot for
-  "Hosting prototypes in Storybook". The article already references it; drop the
-  file here with this exact name and it will appear in the post. (A `.jpg` or
-  `.webp` works too — just update the extension in the article's image link.)
+## Current images
+
+- `prototypes-storybook-flow.jpg` — Storybook screenshot used by
+  "Hosting prototypes in Storybook".
