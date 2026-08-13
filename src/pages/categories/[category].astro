@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import ArticleList from '../../components/ArticleList.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { byNewest, categoryDetails, isPublished, type Category } from '../../lib/articles';
+
+export function getStaticPaths() {
+  return Object.keys(categoryDetails).map((category) => ({
+    params: { category },
+    props: { category: category as Category },
+  }));
+}
+
+interface Props {
+  category: Category;
+}
+
+const { category } = Astro.props;
+const details = categoryDetails[category];
+const articles = (await getCollection('articles'))
+  .filter((article) => isPublished(article) && article.data.category === category)
+  .sort(byNewest);
+---
+
+<BaseLayout title={details.label} description={details.description}>
+  <h1>{details.label}</h1>
+  <p class="intro">{details.description}</p>
+  <ArticleList articles={articles} showCategory={false} />
+</BaseLayout>
