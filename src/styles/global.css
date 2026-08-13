@@ -232,8 +232,17 @@ pre {
   margin: 2rem 0;
 }
 
-.article-footer {
+.colophon-note {
   margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.article-footer {
+  margin-top: 1.5rem;
   font-size: 0.8125rem;
   color: var(--muted);
 }
